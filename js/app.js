@@ -2,10 +2,6 @@
 $().ready(() => {
   // Contenedor principal
   const contenedor = document.getElementById("demo");
-  contenedor.innerHTML = `
-                    <div class="loader">
-                        🐶 Cargando datos...
-                    </div>`;
 
   // Función reutilizable para crear un <li> y añadirlo a la lista
   function crearLi(contenido, lista) {
@@ -14,7 +10,18 @@ $().ready(() => {
     lista.appendChild(item);
   }
 
+  // Función para mostrar el estado de carga
+  function mostrarLoader(){
+    contenedor.innerHTML = "";
+    let parrafo = document.createElement("p");
+    parrafo.className = "loader";
+    parrafo.textContent = "🐶 Cargando datos...";
+    contenedor.appendChild(parrafo);
+
+  }
+
   $("#btn-breeds").click(() => {
+    mostrarLoader();
     $.ajax({
       url: "https://dogapi.dog/api/v2/breeds?page[size]=30",
       type: "GET",
@@ -88,6 +95,7 @@ $().ready(() => {
   });
 
   $("#btn-facts").click(() => {
+    mostrarLoader();
     $.ajax({
       url: "https://dogapi.dog/api/v2/facts?limit=5",
       type: "GET",
