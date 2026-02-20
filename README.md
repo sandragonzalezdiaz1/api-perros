@@ -8,7 +8,6 @@ Aplicación web que consume la API pública https://dogapi.dog para mostrar:
 - Diseño responsive
 
 ## 🚀 Tecnologías utilizadas
-
 - HTML5
 - CSS3
 - JavaScript
@@ -16,14 +15,5 @@ Aplicación web que consume la API pública https://dogapi.dog para mostrar:
 - AJAX
 - API REST
 
-## 🧠 Qué he practicado
-
-- Consumo de APIs externas
-- Manejo de JSON
-- Manipulación del DOM
-- Manejo de errores
-- Diseño responsive con Grid
-
 ## 🌐 Demo
-
-https://sandragonzalezdiaz1.github.io/
+https://sandragonzalezdiaz1.github.io/api-perros/
