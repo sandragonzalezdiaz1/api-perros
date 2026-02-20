@@ -14,8 +14,11 @@ Aplicación web que consume la API pública https://dogapi.dog para mostrar:
 - jQuery
 - AJAX
 - API REST
+
 ## 📷 Captura
+Página de razas de perros
 ![Preview](assets/screenshot_razas.png)
+Página de datos curiosos sobre perros
 ![Preview](assets/screenshot_datos.png)
 
 ## 🌐 Demo

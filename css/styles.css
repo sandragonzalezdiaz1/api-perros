@@ -13,7 +13,6 @@ body {
     color: #333;
 }
 
-/* Título principal */
 h1 {
     text-align: center;
     margin-bottom: 25px;
@@ -22,7 +21,21 @@ h1 {
 }
 
 
-.botones {
+p {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #5d4037;
+    background-color: #fff8f0;
+    padding: 15px 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+
+.buttons {
     display: flex;
     justify-content: center; 
     gap: 15px;              
@@ -89,8 +102,8 @@ article li {
 }
 
 /* Datos curiosos */
-.dato {
-    background-color: #fff8e1; /* amarillo pastel */
+.fact {
+    background-color: #fff8e1; 
     padding: 20px;
     border-left: 6px solid #f57c00;
     border-radius: 12px;
@@ -100,7 +113,7 @@ article li {
     transition: transform 0.2s ease;
 }
 
-.dato:hover {
+.fact:hover {
     transform: translateY(-3px);
 }
 
@@ -116,6 +129,7 @@ article li {
     text-align: center;
 }
 
+/* Mensaje de carga */
 .loader {
     text-align: center;
     font-weight: bold;

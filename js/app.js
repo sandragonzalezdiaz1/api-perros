@@ -3,7 +3,7 @@ $().ready(() => {
   // Contenedor principal
   const contenedor = document.getElementById("demo");
 
-  // Función reutilizable para crear un <li> y añadirlo a la lista
+  // Función para crear un <li> y añadirlo a la lista
   function crearLi(contenido, lista) {
     let item = document.createElement("li");
     item.innerHTML = contenido;
@@ -27,7 +27,7 @@ $().ready(() => {
       type: "GET",
       dataType: "json",
       success: (respuesta) => {
-        console.log(respuesta.data);
+        //console.log(respuesta.data);
 
         // Limpiamos el contenedor anterior
         document.getElementById("demo").innerHTML = "";
@@ -53,7 +53,7 @@ $().ready(() => {
             if (clave === "name") {
               let titulo = document.createElement("h3");
               titulo.textContent = "🐶 " + valor;
-              articulo.append(titulo);
+              articulo.appendChild(titulo);
             } else if (clave === "hypoallergenic") {
               // Formateamos el valor booleano para mostrar Sí / No
               texto = `<strong>Hipoalergénico:</strong> ${valor ? "Sí" : "No"}`;
@@ -111,11 +111,11 @@ $().ready(() => {
           //console.log(fact.attributes.body)
 
           let parrafo = document.createElement("p");
-          parrafo.classList.add("dato");
+          parrafo.className = "fact";
           parrafo.textContent = fact.attributes.body;
 
           contenedor.appendChild(parrafo);
-        });
+        })
       },
       error: () => {
         contenedor.innerHTML = "";
@@ -125,7 +125,7 @@ $().ready(() => {
         mensajeError.textContent =
           "⚠️ No se pudieron cargar los datos. Inténtalo de nuevo más tarde.";
         contenedor.appendChild(mensajeError);
-      },
-    });
-  });
-});
+      }
+    })
+  })
+})
